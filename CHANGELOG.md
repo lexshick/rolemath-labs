@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1 — 2026-08-10
+
+- Declared LF line endings as the repository and Pages serialization contract.
+- Corrected SHA-256 checksums to match the bytes served by GitHub Pages and stored in Git.
+- No certification facts, route projections, Fit Check behavior, or licensing terms changed.
+
 ## 0.1.0 — 2026-08-10
 
 - Published 50 normalized certification fact records in JSON and CSV.
