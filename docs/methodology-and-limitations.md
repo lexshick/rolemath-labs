@@ -1,7 +1,10 @@
 # Methodology and limitations
 
-Version 0.1.0 is a dated public-fact projection from RoleMath's private evidence system. It is not
-a certification ranking, a course marketplace, or a claim that every record is complete.
+Dataset version 0.1.1 is a dated public-fact projection from RoleMath's private evidence system. It
+is not a certification ranking, a course marketplace, or a claim that every record is complete.
+
+The human-readable version is published at
+<https://lexshick.github.io/rolemath-labs/methodology/>.
 
 ## Evidence and currentness
 

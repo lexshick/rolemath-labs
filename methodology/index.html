@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RoleMath methodology — Evidence, currentness, and decision boundaries</title>
+  <meta name="description" content="How RoleMath separates official facts, derived context, editorial judgment, and unknowns across certification decisions and open data.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://lexshick.github.io/rolemath-labs/methodology/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="RoleMath methodology — Evidence, currentness, and decision boundaries">
+  <meta property="og:description" content="The evidence classes, currentness rules, fail-closed behavior, and limitations behind RoleMath Labs.">
+  <meta property="og:url" content="https://lexshick.github.io/rolemath-labs/methodology/">
+  <meta property="og:site_name" content="RoleMath Labs">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/rolemath-labs/assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="/rolemath-labs/">RoleMath <span>Labs</span></a>
+    <nav aria-label="Primary">
+      <a href="/rolemath-labs/#data">Open data</a>
+      <a href="/rolemath-labs/case-study/">Case study</a>
+      <a aria-current="page" href="/rolemath-labs/methodology/">Methodology</a>
+      <a href="/rolemath-labs/data-dictionary/">Data dictionary</a>
+      <a href="/rolemath-labs/fit-check/">Fit Check</a>
+      <a href="https://rolemath.com/">RoleMath</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero compact">
+      <p class="eyebrow">Methodology · public release v0.2.0</p>
+      <h1>Show what is known, what is judged, and what remains unresolved.</h1>
+      <p class="lede">RoleMath Labs is a dated public-fact projection from a larger evidence and decision system. It is not a certification ranking, a pass predictor, a course marketplace, or a claim that every record is complete.</p>
+      <div class="actions">
+        <a class="button" href="/rolemath-labs/#data">Download the data</a>
+        <a class="button secondary" href="/rolemath-labs/data-dictionary/">Inspect the fields</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Evidence model</p>
+      <h2>Four different statement types should never look interchangeable.</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Statement type</th><th>What it means</th><th>Typical example</th><th>Reader treatment</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Official fact</strong></td><td>A claim attributable to the credential owner or another authoritative first-party source.</td><td>Current exam code, listed fee, eligibility rule, renewal interval.</td><td>Show the source and the date RoleMath checked it.</td></tr>
+            <tr><td><strong>Public-data context</strong></td><td>A fact from a cited public dataset that describes a broader occupation or market context.</td><td>BLS occupation pay or employment data.</td><td>Never relabel occupation evidence as an outcome for credential holders.</td></tr>
+            <tr><td><strong>RoleMath editorial judgment</strong></td><td>A bounded interpretation that turns evidence into a decision or tradeoff.</td><td>“Choose Network+ first when the missing layer is vendor-neutral foundation.”</td><td>State the boundary, alternative, and what would change the conclusion.</td></tr>
+            <tr><td><strong>Unknown or conflict</strong></td><td>A value RoleMath could not currently attribute, or sources that do not reconcile.</td><td>Voucher inclusion not stated; version identity unresolved.</td><td>Keep it unknown. Do not infer absence or force a recommendation.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section split">
+      <div>
+        <p class="eyebrow">Currentness</p>
+        <h2>A correct fact can still be unsafe when its date is unclear.</h2>
+        <p>Credential identity, exam version, fees, eligibility, lifecycle, renewal, and preparation can change independently. Where available, public records therefore retain both the attributable source and the date RoleMath checked it.</p>
+        <p>The public <code>currentness_state</code> is deliberately small:</p>
+        <ul class="check-list">
+          <li><strong>current</strong> — supported by reviewed attributable evidence as of the recorded check;</li>
+          <li><strong>stale</strong> — the review horizon or evidence no longer supports presenting the value as current;</li>
+          <li><strong>unresolved</strong> — identity, version, source capture, or another consequential conflict remains open.</li>
+        </ul>
+      </div>
+      <aside class="callout">
+        <h3>Fail-closed rule</h3>
+        <p>An expired, conflicting, or missing value does not become a guessed current value. “Not found in the checked sources” also does not become “the vendor does not offer it.”</p>
+      </aside>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Field semantics</p>
+      <h2>Scope the observation before comparing it.</h2>
+      <div class="card-grid">
+        <article class="card"><h3>Fees</h3><p>Exam prices are observations with currency, audience, geography, membership, tax, and effective-date boundaries where those distinctions matter. A listed exam fee is not automatically total cost.</p></article>
+        <article class="card"><h3>Eligibility</h3><p>Hard prerequisites, certification-award experience requirements, and recommended background are separate concepts. Passing an exam is not always the same as immediately holding the credential.</p></article>
+        <article class="card"><h3>Renewal</h3><p>Validity period, renewal mechanism, continuing-education requirements, and renewal fees remain separate. An unpriced path is not described as free.</p></article>
+        <article class="card"><h3>Preparation</h3><p>Official and free resources are linked when attributable. A resource list is not called a complete course unless the evidence supports that description.</p></article>
+        <article class="card"><h3>Roles</h3><p>Role links are decision context, not claims that employers universally require a credential or that the credential causes employment.</p></article>
+        <article class="card"><h3>Training offers</h3><p>Dated provider-owned observations describe what a public page showed when checked. They do not prove seats, future availability, provider willingness, or a relationship.</p></article>
+      </div>
+    </section>
+
+    <section class="section split">
+      <div>
+        <p class="eyebrow">Occupation context</p>
+        <h2>Occupation evidence is not certification-holder evidence.</h2>
+        <p>Public occupation statistics may help a reader understand the broader work attached to a certification decision. They describe the mapped occupation and its published methodology—not people who hold the certification.</p>
+        <p>RoleMath does not use occupation pay or employment figures to claim that a credential caused salary, hiring, promotion, placement, or return on investment. A role mapping is also not proof that every employer requires the credential.</p>
+      </div>
+      <aside class="callout">
+        <h3>Forbidden shortcut</h3>
+        <p>“The mapped occupation has a median wage of X” cannot be shortened to “this certification pays X.”</p>
+      </aside>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Training observations</p>
+      <h2>A public price or schedule is an observation, not supply.</h2>
+      <p class="content-narrow">The v0.2.0 public dataset exposes dated training-offer observations only for Security+, CCNA, and AWS Solutions Architect Associate. Those records may include a public price, modality, timing, registration constraint, or voucher posture when the provider-owned page stated it.</p>
+      <ul class="boundary-list content-narrow">
+        <li>No current-seat or future-availability claim.</li>
+        <li>No inference that a provider accepts third-party demand.</li>
+        <li>No claim of authorization, quality, reputation, partnership, or commercial relationship beyond what an attributable source states.</li>
+        <li>No “no offer exists” conclusion when a provider or product was not checked.</li>
+        <li>No provider payment may alter an editorial conclusion.</li>
+      </ul>
+    </section>
+
+    <section class="section split">
+      <div>
+        <p class="eyebrow">Route semantics</p>
+        <h2>A stable identifier is not automatically a live page.</h2>
+        <p><code>route_identifier</code> is a stable RoleMath route-shaped identifier. It supports joins and future projection, but it does not promise that a public destination exists.</p>
+        <p><code>rolemath_url</code> is non-null only when the exact normalized route appeared in the 310-URL RoleMath sitemap observed on 2026-08-10. Twenty-eight records matched and 22 remain null.</p>
+        <p>Sitemap presence proves neither Google indexing nor traffic. The public dictionary keeps those semantics explicit so a downstream user cannot treat a held identifier as a live recommendation.</p>
+      </div>
+      <aside class="callout">
+        <h3>Exact matching only</h3>
+        <p>No fuzzy route inference, successor substitution, or “close enough” URL projection was used.</p>
+      </aside>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Fit Check</p>
+      <h2>A bounded decision aid with no default result.</h2>
+      <p class="content-narrow">The Certification Fit Check asks for three choices: target work, experience stage, and the tradeoff that matters. It returns one next decision, one reason, one non-fit boundary, at most one alternative, and one public next action.</p>
+      <ul class="check-list content-narrow">
+        <li>No account, email, network request, cookies, analytics call, local storage, or server storage.</li>
+        <li>No synthetic difficulty, confidence, readiness, or employability score.</li>
+        <li>No result before all three choices are made.</li>
+        <li>No recommendation when a required destination is not in the preserved public-route set.</li>
+        <li>No prediction of passing, hiring, salary, timing, or outcome.</li>
+      </ul>
+      <p><a href="/rolemath-labs/fit-check/">Try the noindex public beta</a>.</p>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Publication and versioning</p>
+      <h2>Public artifacts are dated releases, not silent living claims.</h2>
+      <p class="content-narrow">The dataset ships with a version, release notes, a field dictionary, and SHA-256 checksums. Changes to data content should produce a new release rather than silently rewriting what an earlier version meant. The v0.1.1 maintenance release corrected checksum serialization without changing certification facts; v0.2.0 changes the public presentation and indexability contract, not the three data files.</p>
+      <p class="content-narrow">The static release validator checks page indexability, canonicals, sitemap membership, Fit Check privacy boundaries, record counts, CSV/JSON parity, internal links, and file checksums before publication.</p>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Deliberately excluded</p>
+      <h2>The open release is smaller than the private system.</h2>
+      <p class="content-narrow">Private readiness profiles, completeness calculations, registry order, recommendation rankings, confidence logic, review workflow, publication state, internal source identifiers, private provider research, personal data, and commercial matching logic are not in the public dataset.</p>
+      <div class="link-grid">
+        <a href="/rolemath-labs/data-dictionary/">Read the field dictionary</a>
+        <a href="/rolemath-labs/case-study/">Read the public case study</a>
+        <a href="https://rolemath.com/how-rolemath-works/">Main RoleMath methodology</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>RoleMath Labs v0.2.0 · Methodology checked 2026-08-10 · Data and documentation CC BY 4.0 · Demo code MIT</p></footer>
+</body>
+</html>
