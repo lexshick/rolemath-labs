@@ -3,47 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>RoleMath Labs — Open certification data and Fit Check</title>
-  <meta name="description" content="Download RoleMath's 50-record certification facts dataset and try a private, client-only Certification Fit Check.">
-  <meta name="robots" content="noindex, follow">
+  <title>RoleMath Labs — Open certification data and decision experiments</title>
+  <meta name="description" content="Download 50 sourced technical-certification records, read the RoleMath build case study, and try a private client-only Certification Fit Check.">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://lexshick.github.io/rolemath-labs/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RoleMath Labs">
+  <meta property="og:title" content="RoleMath Labs — Open certification data and decision experiments">
+  <meta property="og:description" content="Download 50 sourced technical-certification records, read the RoleMath build case study, and try a private client-only Certification Fit Check.">
+  <meta property="og:url" content="https://lexshick.github.io/rolemath-labs/">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#0b6b4f">
   <link rel="stylesheet" href="/rolemath-labs/assets/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"RoleMath Top-50 Certification Data","description":"Fifty normalized technical certification fact records with attributable sources, checked dates, cost, eligibility, lifecycle, preparation, occupation context, and explicit unknowns.","url":"https://lexshick.github.io/rolemath-labs/","sameAs":"https://github.com/lexshick/rolemath-labs","identifier":"rolemath-top-50-v0.1.1","version":"0.1.1","datePublished":"2026-08-10","dateModified":"2026-08-10","creator":{"@type":"Person","name":"Alex Shick","url":"https://rolemath.com/about/"},"publisher":{"@type":"Organization","name":"RoleMath","url":"https://rolemath.com/"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"keywords":["IT certifications","technical training","certification data","credential currentness","exam fees"],"measurementTechnique":"First-party source review and normalized evidence records","distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://lexshick.github.io/rolemath-labs/data/certifications.json"},{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://lexshick.github.io/rolemath-labs/data/certifications.csv"}]}</script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="brand" href="/rolemath-labs/">RoleMath <span>Labs</span></a>
-    <nav aria-label="Primary"><a href="#data">Open data</a><a href="/rolemath-labs/fit-check/">Fit Check</a><a href="https://rolemath.com/">RoleMath</a></nav>
+    <nav aria-label="Primary">
+      <a href="/rolemath-labs/#data">Open data</a>
+      <a href="/rolemath-labs/case-study/">Case study</a>
+      <a href="/rolemath-labs/methodology/">Methodology</a>
+      <a href="/rolemath-labs/fit-check/">Fit Check</a>
+      <a href="https://rolemath.com/">RoleMath</a>
+    </nav>
   </header>
-  <main>
+  <main id="main">
     <section class="hero">
-      <p class="eyebrow">Public release · v0.1.1 · 2026-08-10 · noindex sidecar</p>
+      <p class="eyebrow">Site v0.2.0 · dataset v0.1.1 · published 2026-08-10</p>
       <h1>Certification decisions need better facts.</h1>
-      <p class="lede">RoleMath Labs publishes a small, auditable layer between “which credential fits?” and “is paid preparation justified?” Start with 50 sourced certification records or use the three-choice Fit Check.</p>
-      <div class="actions"><a class="button" href="/rolemath-labs/fit-check/">Try the Fit Check</a><a class="button secondary" href="#data">Download the data</a></div>
+      <p class="lede">RoleMath Labs publishes auditable public artifacts from an evidence-backed technical-training decision system: a 50-record dataset, a client-only Fit Check, and a candid case study of the product, acquisition, and release architecture behind them.</p>
+      <div class="actions">
+        <a class="button" href="/rolemath-labs/case-study/">Read the case study</a>
+        <a class="button secondary" href="#data">Download the data</a>
+        <a class="button secondary" href="/rolemath-labs/fit-check/">Try the Fit Check</a>
+      </div>
     </section>
 
     <section class="stats" aria-label="Release facts">
       <div><strong>50</strong><span>certification records</span></div>
       <div><strong>13</strong><span>vendors represented</span></div>
       <div><strong>28</strong><span>exact live RoleMath links</span></div>
-      <div><strong>3</strong><span>bounded provider-observation records</span></div>
+      <div><strong>0</strong><span>scores, rankings, or outcome promises</span></div>
     </section>
 
     <section id="data" class="section">
       <p class="eyebrow">Open data</p>
       <h2>Download the Top-50 public facts</h2>
-      <p>The JSON retains the evidence structure; the CSV is a compact analysis projection. Unknowns stay unknown. A non-null RoleMath URL means only that the exact route appeared in the 310-URL sitemap observed on 2026-08-10.</p>
+      <p>The JSON retains nested evidence; the CSV is a compact analysis projection. Unknowns stay unknown. A non-null RoleMath URL means only that the exact route appeared in the 310-URL sitemap observed on 2026-08-10.</p>
       <div class="download-grid">
         <a class="download" href="/rolemath-labs/data/certifications.json" download><strong>JSON</strong><span>Nested facts and sources</span></a>
         <a class="download" href="/rolemath-labs/data/certifications.csv" download><strong>CSV</strong><span>Compact 50-row table</span></a>
-        <a class="download" href="/rolemath-labs/data/field_dictionary.json" download><strong>Dictionary</strong><span>Fields and limitations</span></a>
+        <a class="download" href="/rolemath-labs/data/field_dictionary.json" download><strong>Dictionary JSON</strong><span>Fields and limitations</span></a>
       </div>
-      <p class="small"><a href="/rolemath-labs/checksums.txt">Checksums</a> · <a href="https://github.com/lexshick/rolemath-labs/blob/main/docs/methodology-and-limitations.md">Methodology and limitations</a> · <a href="https://github.com/lexshick/rolemath-labs/blob/main/docs/release-notes.md">Release notes</a></p>
+      <p class="small"><a href="/rolemath-labs/data-dictionary/">Human-readable dictionary</a> · <a href="/rolemath-labs/checksums.txt">Checksums</a> · <a href="/rolemath-labs/methodology/">Methodology and limitations</a></p>
     </section>
 
     <section class="section split">
-      <div><p class="eyebrow">What it contains</p><h2>Currentness, cost, eligibility, preparation, and context</h2><p>Records separate hard prerequisites from recommended background, scope fees by currency and audience, retain lifecycle and renewal semantics, link official/free preparation, and carry checked dates and known unknowns.</p></div>
-      <div class="callout"><h3>What it does not prove</h3><p>Not certification-caused salary, hiring, placement, pass rate, ROI, training availability, provider willingness, a provider relationship, traffic, leads, conversions, or revenue.</p></div>
+      <div>
+        <p class="eyebrow">Evidence contract</p>
+        <h2>Currentness, scoped cost, eligibility, preparation, and context</h2>
+        <p>Records separate hard prerequisites from recommended background, scope fees by currency and audience, retain lifecycle and renewal semantics, link official or free preparation, and carry checked dates plus explicit unresolved fields.</p>
+      </div>
+      <div class="callout">
+        <h3>What it does not prove</h3>
+        <p>Not certification-caused salary, hiring, placement, pass rate, ROI, current training seats, provider willingness, a provider relationship, traffic quality, leads, conversions, or revenue.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Build in public</p>
+      <h2>A product case study with the uncomfortable parts left in</h2>
+      <p>The case study records the live product floor, Search Console baseline, evidence and release model, failures caught before they became claims, and the future qualified-training-demand hypothesis. It distinguishes what exists from what remains unvalidated.</p>
+      <div class="actions"><a class="button" href="/rolemath-labs/case-study/">See the architecture and measured baseline</a></div>
     </section>
 
     <section class="section">
@@ -59,6 +92,6 @@
       </div>
     </section>
   </main>
-  <footer><p>Built by <a href="https://rolemath.com/about/">Alex Shick / RoleMath</a>. Data and documentation: CC BY 4.0. Demo code: MIT.</p></footer>
+  <footer><p>Built by <a href="https://rolemath.com/about/">Alex Shick / RoleMath</a>. Data and documentation: CC BY 4.0. Demo code: MIT. <a href="https://github.com/lexshick/rolemath-labs">Source on GitHub</a>.</p></footer>
 </body>
 </html>
