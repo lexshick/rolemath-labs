@@ -13,7 +13,8 @@ certification facts dataset and a client-only Certification Fit Check.
 - [Field dictionary](data/field_dictionary.json)
 - [SHA-256 checksums](checksums.txt)
 
-Version `0.1.0` contains exactly 50 records. Each consequential field retains an attributable
+Version `0.1.1` contains the same 50 fact records as v0.1.0 and corrects the checksum serialization
+contract. Each consequential field retains an attributable
 source and checked date where available. A `route_identifier` is a stable RoleMath identifier, not
 proof that a public page exists. `rolemath_url` is non-null only when the exact route appeared in
 the 310-URL RoleMath sitemap observed on 2026-08-10; that does not prove Google indexing or traffic.
