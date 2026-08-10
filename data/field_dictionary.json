@@ -1,0 +1,116 @@
+{
+  "schema_version": "rolemath_open_certification_data_v2",
+  "csv_fields": [
+    {
+      "name": "certification_id",
+      "description": "Stable RoleMath credential identifier."
+    },
+    {
+      "name": "vendor_id",
+      "description": "Stable RoleMath vendor identifier."
+    },
+    {
+      "name": "vendor_name",
+      "description": "Credential vendor name."
+    },
+    {
+      "name": "name",
+      "description": "Current credential name recorded by RoleMath."
+    },
+    {
+      "name": "slug",
+      "description": "Stable RoleMath credential slug."
+    },
+    {
+      "name": "route_identifier",
+      "description": "Stable RoleMath route-shaped identifier; it is not a promise that a live page exists."
+    },
+    {
+      "name": "rolemath_url",
+      "description": "Absolute live RoleMath URL only when an authoritative live-route set is supplied; otherwise blank."
+    },
+    {
+      "name": "official_url",
+      "description": "Vendor-owned credential source URL."
+    },
+    {
+      "name": "currentness_state",
+      "description": "current, stale, or unresolved as of the record's checked evidence."
+    },
+    {
+      "name": "current_exam_code",
+      "description": "Current attributable exam code when the vendor publishes one."
+    },
+    {
+      "name": "current_version",
+      "description": "Current attributable version label or explicit vendor-no-number posture."
+    },
+    {
+      "name": "current_source_url",
+      "description": "First-party source for current credential identity."
+    },
+    {
+      "name": "current_checked_date",
+      "description": "Date RoleMath checked the currentness source."
+    },
+    {
+      "name": "exam_fees_json",
+      "description": "JSON array of scoped fee observations with source and checked date."
+    },
+    {
+      "name": "renewal_json",
+      "description": "JSON renewal/lifecycle object, or null when not attributable."
+    },
+    {
+      "name": "role_ids",
+      "description": "Semicolon-delimited source-linked RoleMath role identifiers."
+    },
+    {
+      "name": "occupation_ids",
+      "description": "Semicolon-delimited occupation identifiers for the published contexts."
+    },
+    {
+      "name": "training_offer_count",
+      "description": "Count of dated provider-owned training observations in the JSON record."
+    },
+    {
+      "name": "known_unknowns_json",
+      "description": "JSON array of explicit unresolved public-fact fields."
+    }
+  ],
+  "excluded_private_fields": [
+    "target_rank",
+    "decision_cluster",
+    "publication",
+    "decision",
+    "readiness",
+    "completeness",
+    "freshness_status",
+    "next_review_date",
+    "confidence",
+    "mapping_confidence",
+    "source_ids",
+    "seed_status",
+    "review_status"
+  ],
+  "limitations": [
+    "Occupation statistics describe the mapped occupation, not certification holders, and do not prove that this credential causes a salary, hiring, or employment outcome.",
+    "Training offers are dated observations, not availability, willingness, relationship, or provider completeness claims.",
+    "Route identifiers do not imply that a live RoleMath page exists; rolemath_url remains null unless an authoritative live-route set is supplied.",
+    "A non-null rolemath_url means the exact route appeared in the 310-URL RoleMath sitemap observed on 2026-08-10; it is not an indexing or traffic claim."
+  ],
+  "release": {
+    "version": "0.1.0",
+    "published_date": "2026-08-10",
+    "source_package_sha": "2ff4983f0238085f29d0faf3307c23aee24c33c8",
+    "live_url_projection": {
+      "source": "https://rolemath.com/sitemap.xml",
+      "observed_date": "2026-08-10",
+      "sitemap_route_count": 310,
+      "sitemap_sha256": "5c1424e53f6abe914cc3a39d6bdc26209a8556156c063242c320fdd876533acd",
+      "matched_records": 28,
+      "null_records": 22,
+      "method": "Exact normalized route match only; no fuzzy matching or held-route inference."
+    }
+  }
+}

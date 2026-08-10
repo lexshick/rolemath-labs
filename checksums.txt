@@ -1,0 +1,3 @@
+9797fb3415c55b2ac15ef4eae94faf19967bcbd83b988d41c75437a38a7d341e  data/certifications.json
+9bfeda66cc9e8c659ca7bbcdc20d1dcbf902c02dbee37611d3d3bddd202617c6  data/certifications.csv
+d0afebb2e631f04a0af8d9ec39bde55b0cf69f35010535467481d518a07dfa2f  data/field_dictionary.json

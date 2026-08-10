@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use the RoleMath Top-50 certification dataset, cite this release."
+title: "RoleMath Top-50 Certification Data"
+type: dataset
+version: 0.1.0
+date-released: 2026-08-10
+authors:
+  - family-names: Shick
+    given-names: Alex
+repository-code: "https://github.com/lexshick/rolemath-labs"
+url: "https://lexshick.github.io/rolemath-labs/"
+license: CC-BY-4.0
