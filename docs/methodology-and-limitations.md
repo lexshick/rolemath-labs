@@ -1,6 +1,6 @@
 # Methodology and limitations
 
-Version 0.1.0 is a dated public-fact projection from RoleMath's private evidence system. It is not
+Version 0.2.0 retains the dated public-fact projection from RoleMath's private evidence system. It is not
 a certification ranking, a course marketplace, or a claim that every record is complete.
 
 ## Evidence and currentness

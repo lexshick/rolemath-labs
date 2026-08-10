@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 — 2026-08-10
+
+- Published an indexable public product-and-operations case study.
+- Published indexable methodology and data landing pages with canonical, social, and structured metadata.
+- Made the RoleMath Labs front door indexable and added a four-URL sitemap.
+- Kept the Certification Fit Check `noindex, follow` and omitted it from the sitemap.
+- Preserved the v0.1.1 dataset bytes and lead-capture/commercial-off boundaries.
+
 ## 0.1.1 — 2026-08-10
 
 - Declared LF line endings as the repository and Pages serialization contract.

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Case study: Building RoleMath’s evidence-backed decision system</title>
+  <meta name="description" content="How Alex Shick built and operated a 310-route technical certification decision system with evidence governance, safe releases, open data, and explicit limits.">
+  <meta name="robots" content="index, follow"><link rel="canonical" href="https://lexshick.github.io/rolemath-labs/case-study/">
+  <meta property="og:type" content="article"><meta property="og:title" content="Building RoleMath’s evidence-backed decision system"><meta property="og:description" content="A public case study in product strategy, evidence governance, programmatic publishing, acquisition measurement, and release operations."><meta property="og:url" content="https://lexshick.github.io/rolemath-labs/case-study/">
+  <meta name="twitter:card" content="summary"><meta name="twitter:title" content="Building RoleMath’s evidence-backed decision system"><meta name="twitter:description" content="Product strategy, evidence governance, acquisition measurement, and safe release operations.">
+  <link rel="stylesheet" href="/rolemath-labs/assets/styles.css"><link rel="stylesheet" href="/rolemath-labs/assets/editorial.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Building RoleMath’s evidence-backed decision system","description":"A public case study in product strategy, evidence governance, programmatic publishing, acquisition measurement, and release operations.","datePublished":"2026-08-10","dateModified":"2026-08-10","author":{"@type":"Person","name":"Alex Shick"},"publisher":{"@type":"Organization","name":"RoleMath"},"mainEntityOfPage":"https://lexshick.github.io/rolemath-labs/case-study/"}</script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="/rolemath-labs/">RoleMath <span>Labs</span></a><nav aria-label="Primary"><a href="/rolemath-labs/data/">Data</a><a href="/rolemath-labs/methodology/">Methodology</a><a aria-current="page" href="/rolemath-labs/case-study/">Case study</a><a href="/rolemath-labs/fit-check/">Fit Check</a></nav></header>
+  <main>
+    <article class="hero compact prose">
+      <p class="eyebrow">Public case study · product and operations</p>
+      <h1>Building a decision system people can audit.</h1>
+      <p class="lede">RoleMath turns fragmented certification rules, renewal policies, occupation data, and training prices into bounded technical-training decisions. The work demonstrates product strategy and operational leadership—not a claim that the platform has already achieved demand or revenue.</p>
+      <div class="meta-row"><span>Alex Shick</span><span>Reviewed August 10, 2026</span><span>6-minute read</span></div>
+    </article>
+
+    <section class="section prose">
+      <p class="kicker">The call</p>
+      <h2>Build the evidence and release system before selling the marketplace.</h2>
+      <p>A credential page can look complete while quietly mixing exam eligibility with recommended experience, a national occupation wage with credential-holder pay, or a dated provider price with live availability. RoleMath’s central product decision was to separate those claims before adding commercial behavior.</p>
+      <blockquote>Decide what training is justified first. Keep provider sourcing, consent, and commercial activation behind a separate boundary.</blockquote>
+
+      <div class="fact-grid">
+        <div class="fact-card"><strong>310</strong><p>public RoleMath URLs at the protected production checkpoint</p></div>
+        <div class="fact-card"><strong>50</strong><p>sanitized certification fact records in the open dataset</p></div>
+        <div class="fact-card"><strong>28</strong><p>records with an exact URL match in the observed sitemap; 22 remain null</p></div>
+        <div class="fact-card"><strong>11</strong><p>bounded offers across 3 credential records—without availability or relationship claims</p></div>
+      </div>
+
+      <h2>The inherited problem</h2>
+      <p>Certification decisions change over time. Exam versions retire, renewal routes change, member and nonmember fees diverge, and a vendor’s recommended background is not necessarily a registration gate. At the same time, acquisition pages can overstate salary, hiring, provider coverage, or “worth it” conclusions when the evidence supports only occupation context.</p>
+      <p>The system therefore needed two things at once: a decisive reader experience and a harder evidence boundary underneath it.</p>
+
+      <h2>What I built</h2>
+      <ol class="steps">
+        <li><strong>A temporal credential model.</strong> Current exam identity, checked dates, lifecycle transitions, fees, eligibility, renewal, preparation, conflicts, and known unknowns stay separate.</li>
+        <li><strong>A decision contract.</strong> Strong pages begin with a recommendation, fit and non-fit boundary, one alternative, and one useful next action.</li>
+        <li><strong>Claim-class safeguards.</strong> Occupation statistics describe occupations, not credential holders. Employer samples require a complete tuple or stay suppressed. Unverified relationships do not render publicly.</li>
+        <li><strong>A gate-delegated release system.</strong> Deterministic checks and fresh adversarial review protect a wave without manufacturing human approval or forcing circular per-page signoffs.</li>
+        <li><strong>An open-data boundary.</strong> Public facts, sources, dates, and limitations are downloadable; private scoring, review state, and commercial matching remain excluded.</li>
+      </ol>
+
+      <h2>A failed release can be a successful control</h2>
+      <p>A controlled attempt to regenerate the production substrate accounted for all 310 protected public routes as 161 ready and 149 hash-void. Because 149 routes were not release-ready, the release was aborted. Production stayed on the known-good deployment. That result was not page-production progress, but it proved the release control would fail closed instead of silently demoting or changing public content.</p>
+
+      <h2>First acquisition evidence—without inflating it</h2>
+      <p>The first complete Search Console baseline covered June 19 through August 8, 2026: 3 clicks and 4,034 property impressions. Search Console exposed 520 query rows representing 2,391 impressions; anonymized queries account for the gap. Raw government-source filenames generated 1,240 exposed-query impressions, certification-decision queries 706, salary intent 107, and provider intent 81 with one click.</p>
+      <p>Page impressions are not additive to the property total when more than one RoleMath URL appears in the same result. The useful conclusion is not “traffic achieved.” It is that raw-source and salary visibility must be separated from the certification and provider decisions RoleMath intends to serve.</p>
+
+      <h2>What the work proves</h2>
+      <ul>
+        <li>Product judgment across research, data contracts, editorial UX, acquisition measurement, and release operations.</li>
+        <li>Ability to convert messy vendor and public data into auditable decision infrastructure.</li>
+        <li>Commercial discipline: training-price observations are useful without implying provider consent, inventory, willingness, or a relationship.</li>
+        <li>Operational restraint: the live site stayed on a verified 310-route floor while experimental products moved to a separate public sidecar.</li>
+      </ul>
+
+      <h2>What it does not prove</h2>
+      <p>This checkpoint does not prove unique visitors, qualified demand, conversion, revenue, provider relationships, employment outcomes, or certification-caused pay. The Fit Check is a bounded decision aid, not a readiness, salary, hiring, or pass-probability model.</p>
+
+      <div class="actions"><a class="button" href="/rolemath-labs/data/">Inspect the open data</a><a class="button secondary" href="/rolemath-labs/methodology/">Read the methodology</a></div>
+    </section>
+  </main>
+  <footer><p>Built by <a href="https://rolemath.com/about/">Alex Shick / RoleMath</a>. This is a dated public artifact, not an outcome claim.</p></footer>
+</body>
+</html>

@@ -1,5 +1,15 @@
 # Release notes
 
+## v0.2.0 — public career-proof release
+
+The v0.2.0 release adds an indexable case study, methodology, data landing, and Labs front door.
+Each indexable page carries a self-canonical, specific title/description, social metadata, and
+page-appropriate JSON-LD. The Fit Check remains `noindex, follow` and is absent from the sitemap.
+
+The three data files are byte-identical to v0.1.1. No lead capture, provider sharing, schedule
+publication, affiliate behavior, or commercial activation was added.
+The Labs package version is 0.2.0; the unchanged dataset content identifies itself as v0.1.0.
+
 ## v0.1.1 — checksum serialization correction
 
 The v0.1.1 maintenance release declares LF line endings as the canonical serialization and
