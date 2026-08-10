@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RoleMath Top-50 data dictionary — Public certification fact fields</title>
+  <meta name="description" content="Definitions, null semantics, evidence boundaries, and exclusions for the RoleMath Top-50 certification JSON and CSV release.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://lexshick.github.io/rolemath-labs/data-dictionary/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="RoleMath Top-50 data dictionary">
+  <meta property="og:description" content="Inspect the public fields, null semantics, evidence boundaries, and private exclusions behind the RoleMath certification dataset.">
+  <meta property="og:url" content="https://lexshick.github.io/rolemath-labs/data-dictionary/">
+  <meta property="og:site_name" content="RoleMath Labs">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/rolemath-labs/assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="/rolemath-labs/">RoleMath <span>Labs</span></a>
+    <nav aria-label="Primary">
+      <a href="/rolemath-labs/#data">Open data</a>
+      <a href="/rolemath-labs/case-study/">Case study</a>
+      <a href="/rolemath-labs/methodology/">Methodology</a>
+      <a aria-current="page" href="/rolemath-labs/data-dictionary/">Data dictionary</a>
+      <a href="/rolemath-labs/fit-check/">Fit Check</a>
+      <a href="https://rolemath.com/">RoleMath</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero compact">
+      <p class="eyebrow">Open data contract · schema rolemath_open_certification_data_v2</p>
+      <h1>Know what every field means before using it.</h1>
+      <p class="lede">The JSON preserves nested evidence and source context. The CSV is a compact 50-row projection for analysis. Null and empty values remain meaningful: they are not invitations to infer a fact that RoleMath did not publish.</p>
+      <div class="actions">
+        <a class="button" href="/rolemath-labs/data/certifications.json" download>Download JSON</a>
+        <a class="button secondary" href="/rolemath-labs/data/certifications.csv" download>Download CSV</a>
+        <a class="button secondary" href="/rolemath-labs/data/field_dictionary.json" download>Machine-readable dictionary</a>
+      </div>
+    </section>
+
+    <section class="metric-grid" aria-label="Dataset contract facts">
+      <div class="metric-card"><strong>50</strong><span>records</span></div>
+      <div class="metric-card"><strong>19</strong><span>CSV fields</span></div>
+      <div class="metric-card"><strong>13</strong><span>credential vendors</span></div>
+      <div class="metric-card"><strong>3</strong><span>checksum-protected data files</span></div>
+    </section>
+
+    <section class="section split">
+      <div>
+        <p class="eyebrow">Release identity</p>
+        <h2>Site release and data content are versioned separately.</h2>
+        <p>RoleMath Labs v0.2.0 adds discoverable documentation, this human-readable dictionary, the public case study, and an automated static-release validator. The certification facts remain the same data content published in the v0.1.0 dataset and checksum-corrected v0.1.1 maintenance release.</p>
+        <p>The authoritative machine-readable contract is <a href="/rolemath-labs/data/field_dictionary.json"><code>data/field_dictionary.json</code></a>. The three data-file hashes remain listed in <a href="/rolemath-labs/checksums.txt"><code>checksums.txt</code></a>.</p>
+      </div>
+      <aside class="callout">
+        <h3>License</h3>
+        <p>Data and documentation are available under CC BY 4.0. The static site and Fit Check display code are MIT licensed. Third-party names, trademarks, and linked source material retain their own rights.</p>
+      </aside>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">CSV fields</p>
+      <h2>The compact analysis projection.</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Field</th><th>Meaning</th><th>Important boundary</th></tr></thead>
+          <tbody>
+            <tr><td><code>certification_id</code></td><td>Stable RoleMath credential identifier.</td><td>Use for joins; do not derive rank or priority from its format.</td></tr>
+            <tr><td><code>vendor_id</code></td><td>Stable RoleMath vendor identifier.</td><td>Normalization key, not a legal or authorization claim.</td></tr>
+            <tr><td><code>vendor_name</code></td><td>Credential vendor name.</td><td>Third-party name or mark remains owned by its holder.</td></tr>
+            <tr><td><code>name</code></td><td>Current credential name recorded by RoleMath.</td><td>Read with currentness state and checked evidence.</td></tr>
+            <tr><td><code>slug</code></td><td>Stable RoleMath credential slug.</td><td>Identifier only; it does not prove a page is live.</td></tr>
+            <tr><td><code>route_identifier</code></td><td>Stable route-shaped RoleMath identifier.</td><td>Not a promise that a public RoleMath destination exists.</td></tr>
+            <tr><td><code>rolemath_url</code></td><td>Absolute RoleMath URL when the exact route appeared in the observed public sitemap.</td><td>Blank means no exact live-route match. Non-null proves neither Google indexing nor traffic.</td></tr>
+            <tr><td><code>official_url</code></td><td>Vendor-owned credential source URL.</td><td>Source destination, not a RoleMath endorsement or relationship.</td></tr>
+            <tr><td><code>currentness_state</code></td><td><code>current</code>, <code>stale</code>, or <code>unresolved</code> as of checked evidence.</td><td>Current is dated; unresolved must not be converted to a guessed value.</td></tr>
+            <tr><td><code>current_exam_code</code></td><td>Current attributable exam code when one is published.</td><td>Blank can mean vendor-no-number posture or unresolved evidence; inspect the JSON.</td></tr>
+            <tr><td><code>current_version</code></td><td>Current attributable version label or explicit vendor-no-number posture.</td><td>Do not invent a numeric version when the vendor does not use one.</td></tr>
+            <tr><td><code>current_source_url</code></td><td>First-party source supporting current credential identity.</td><td>Source ownership does not imply RoleMath affiliation.</td></tr>
+            <tr><td><code>current_checked_date</code></td><td>Date RoleMath checked the currentness source.</td><td>Not a guarantee the source remained unchanged afterward.</td></tr>
+            <tr><td><code>exam_fees_json</code></td><td>Serialized array of scoped fee observations with source and checked date.</td><td>Exam price is not automatically total cost; preserve currency, audience, and geography.</td></tr>
+            <tr><td><code>renewal_json</code></td><td>Serialized lifecycle and renewal object, or null.</td><td>Unknown cost or mechanism must not be described as free.</td></tr>
+            <tr><td><code>role_ids</code></td><td>Semicolon-delimited source-linked RoleMath role identifiers.</td><td>Role context is not proof of universal employer requirement.</td></tr>
+            <tr><td><code>occupation_ids</code></td><td>Semicolon-delimited occupation identifiers for published contexts.</td><td>Occupation statistics do not describe credential holders or credential-caused outcomes.</td></tr>
+            <tr><td><code>training_offer_count</code></td><td>Count of dated provider-owned training observations in the JSON record.</td><td>Not a count of current seats, complete market supply, or willing providers.</td></tr>
+            <tr><td><code>known_unknowns_json</code></td><td>Serialized array of explicit unresolved public-fact fields.</td><td>An unknown is preserved rather than filled by inference.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">JSON record structure</p>
+      <h2>The nested evidence projection.</h2>
+      <div class="card-grid">
+        <article class="card"><h3><code>credential</code></h3><p>Stable IDs, vendor and credential names, route semantics, official URL, and known exam codes.</p></article>
+        <article class="card"><h3><code>currentness</code></h3><p>State, current exam identity or version posture, first-party source, and checked date.</p></article>
+        <article class="card"><h3><code>eligibility</code></h3><p>Hard requirements and recommendation/background context without collapsing them into one prerequisite label.</p></article>
+        <article class="card"><h3><code>exam_fees</code></h3><p>Zero or more scoped fee observations. Each observation should retain its currency, audience or geography where relevant, source, and check date.</p></article>
+        <article class="card"><h3><code>renewal</code></h3><p>Lifecycle and maintenance information when attributable. Null remains valid when the public fact is unresolved.</p></article>
+        <article class="card"><h3><code>preparation</code></h3><p>Official and free preparation links and their evidence boundaries.</p></article>
+        <article class="card"><h3><code>roles</code> and <code>occupations</code></h3><p>Source-linked decision context, with occupation-level statistics kept distinct from credential-holder outcomes.</p></article>
+        <article class="card"><h3><code>training_offers</code></h3><p>Dated provider-owned observations, publicly restricted to the bounded three-credential set.</p></article>
+        <article class="card"><h3><code>known_unknowns</code></h3><p>Explicit unresolved public-fact fields. Their presence is part of the contract, not a data-quality score.</p></article>
+      </div>
+      <div class="notice"><strong>Schema-use rule:</strong> downstream code should tolerate nulls and unknown arrays. Do not coerce unresolved evidence to zero, false, “not offered,” or a recommendation.</div>
+    </section>
+
+    <section class="section split">
+      <div>
+        <p class="eyebrow">Live URL projection</p>
+        <h2>Twenty-eight exact matches; 22 deliberate nulls.</h2>
+        <p>The v0.1 data release compared each normalized <code>route_identifier</code> with the 310-route RoleMath sitemap observed on 2026-08-10. Only exact matches received a <code>rolemath_url</code>.</p>
+        <ul class="check-list">
+          <li>No fuzzy matching.</li>
+          <li>No assumption that a successor credential inherited a retired route.</li>
+          <li>No projection from a held or private route.</li>
+          <li>No claim that sitemap membership equals indexing, impressions, or traffic.</li>
+        </ul>
+      </div>
+      <aside class="callout">
+        <h3>Route distinction</h3>
+        <p><code>route_identifier</code> is the durable join key. <code>rolemath_url</code> is a dated live-route observation. Consumers should never substitute one for the other.</p>
+      </aside>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Private fields excluded</p>
+      <h2>The public facts are not the private decision or review system.</h2>
+      <p class="content-narrow">The public export intentionally excludes the following classes of data and logic:</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Excluded class</th><th>Examples</th><th>Why it is excluded</th></tr></thead>
+          <tbody>
+            <tr><td>Registry and ordering</td><td><code>target_rank</code>, decision cluster</td><td>A stable internal slot must not be misread as demand, recommendation, SEO, or implementation priority.</td></tr>
+            <tr><td>Recommendation logic</td><td>Decision records, rankings, alternatives</td><td>The open fact layer should not silently expose or freeze private editorial logic.</td></tr>
+            <tr><td>Readiness and completeness</td><td>Readiness profiles, completeness gates, freshness calculations</td><td>Internal release state is not a reader-facing quality percentage.</td></tr>
+            <tr><td>Review workflow</td><td>Confidence, mapping confidence, source IDs, seed and review status</td><td>Workflow metadata can be mistaken for factual certainty and may expose private operations.</td></tr>
+            <tr><td>Publication state</td><td>Held, candidate, or private release status</td><td>A stable identifier must remain separate from a live public destination.</td></tr>
+            <tr><td>Commercial and personal data</td><td>Private provider research, matching logic, contact or inquiry data</td><td>No private relationship, personal data, or commercial-routing logic belongs in the public release.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Known limitations</p>
+      <h2>What the dataset does not prove.</h2>
+      <ul class="boundary-list content-narrow">
+        <li>Certification-caused salary, hiring, placement, promotion, pass rate, or return on investment.</li>
+        <li>Complete credential-market coverage or complete provider-market coverage.</li>
+        <li>Current training seats, future availability, provider willingness, fulfillment, authorization, or a commercial relationship.</li>
+        <li>That every record is complete merely because it is present.</li>
+        <li>That a non-null RoleMath URL is indexed, receiving impressions, or producing traffic.</li>
+        <li>That a null or unknown value is confirmed absent.</li>
+      </ul>
+      <div class="link-grid">
+        <a href="/rolemath-labs/methodology/">Evidence methodology</a>
+        <a href="/rolemath-labs/case-study/">Public case study</a>
+        <a href="/rolemath-labs/checksums.txt">SHA-256 checksums</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>RoleMath Labs v0.2.0 · Dataset content v0.1.1 · Data and documentation CC BY 4.0 · Demo code MIT</p></footer>
+</body>
+</html>
