@@ -21,7 +21,7 @@ Check `noindex, follow`.
 - [Field dictionary](data/field_dictionary.json)
 - [SHA-256 checksums](checksums.txt)
 
-The Labs release is v0.2.0; the byte-preserved dataset content revision remains v0.1.0. The dataset
+The Labs release and dataset content revision are v0.2.0. The dataset
 contains 50 fact records. Each consequential field retains an attributable source
 and checked date where available. A `route_identifier` is a stable RoleMath identifier, not proof
 that a public page exists. `rolemath_url` is non-null only when the exact route appeared in the
@@ -32,7 +32,7 @@ that a public page exists. `rolemath_url` is non-null only when the exact route 
 - Certification-caused salary, hiring, placement, pass rate, or return on investment.
 - Current training seats, provider willingness, a provider relationship, or complete market
   coverage.
-- Qualified traffic, leads, conversions, revenue, or employment outcomes for RoleMath.
+- Traffic, users, leads, conversions, revenue, or employment outcomes for RoleMath.
 
 Unknown values remain unknown when RoleMath did not find a current attributable value. Occupation
 statistics describe the mapped occupation—not credential holders—and do not prove a credential

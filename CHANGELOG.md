@@ -6,7 +6,8 @@
 - Published indexable methodology and data landing pages with canonical, social, and structured metadata.
 - Made the RoleMath Labs front door indexable and added a four-URL sitemap.
 - Kept the Certification Fit Check `noindex, follow` and omitted it from the sitemap.
-- Preserved the v0.1.1 dataset bytes and lead-capture/commercial-off boundaries.
+- Corrected AWS Solutions Architect Associate renewal cost to route-dependent rather than zero.
+- Regenerated the data checksums while preserving lead-capture/commercial-off boundaries.
 
 ## 0.1.1 — 2026-08-10
 

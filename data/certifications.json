@@ -3391,8 +3391,8 @@
           "lifecycle_state": "time_limited",
           "validity_years": 3.0,
           "model": "Retake the current SAA exam, earn Solutions Architect Professional, or use paid AWS Skill Builder maintenance; cost and validity extension vary by route",
-          "fee": 0.0,
-          "fee_unit": "per_cycle",
+          "fee": null,
+          "fee_unit": "route_dependent",
           "ce_credits": null,
           "ce_period": null,
           "source_url": "https://aws.amazon.com/certification/recertification/",
@@ -7400,7 +7400,7 @@
     }
   ],
   "release": {
-    "version": "0.1.0",
+    "version": "0.2.0",
     "published_date": "2026-08-10",
     "source_package_sha": "2ff4983f0238085f29d0faf3307c23aee24c33c8",
     "live_url_projection": {

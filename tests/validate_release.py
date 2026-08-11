@@ -153,6 +153,20 @@ def main() -> None:
     if len(offers) != 11 or len(offer_records) != 3:
         errors.append(f"provider observation boundary offers={len(offers)} records={len(offer_records)}")
 
+    if records.get("release", {}).get("version") != "0.2.0":
+        errors.append(f"dataset version: {records.get('release', {}).get('version')}")
+    saa = next(
+        (
+            record
+            for record in json_rows
+            if record.get("credential", {}).get("slug") == "aws-solutions-architect-associate"
+        ),
+        None,
+    )
+    renewal = (saa or {}).get("cost", {}).get("renewal", {})
+    if renewal.get("fee") is not None or renewal.get("fee_unit") != "route_dependent":
+        errors.append(f"AWS SAA renewal cost must remain route-dependent: {renewal}")
+
     if errors:
         raise SystemExit("\n".join(errors))
     print("PASS: v0.2.0 static release contract; 4 indexable URLs; Fit Check noindex; 50 JSON/CSV records; 11 offers across 3 credential records; no lead capture or Fit Check network/storage behavior.")

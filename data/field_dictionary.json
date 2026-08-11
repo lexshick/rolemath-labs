@@ -100,7 +100,7 @@
     "A non-null rolemath_url means the exact route appeared in the 310-URL RoleMath sitemap observed on 2026-08-10; it is not an indexing or traffic claim."
   ],
   "release": {
-    "version": "0.1.0",
+    "version": "0.2.0",
     "published_date": "2026-08-10",
     "source_package_sha": "2ff4983f0238085f29d0faf3307c23aee24c33c8",
     "live_url_projection": {
