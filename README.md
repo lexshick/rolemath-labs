@@ -32,7 +32,7 @@ that a public page exists. `rolemath_url` is non-null only when the exact route 
 - Certification-caused salary, hiring, placement, pass rate, or return on investment.
 - Current training seats, provider willingness, a provider relationship, or complete market
   coverage.
-- Traffic, users, leads, conversions, revenue, or employment outcomes for RoleMath.
+- Qualified traffic, leads, conversions, revenue, or employment outcomes for RoleMath.
 
 Unknown values remain unknown when RoleMath did not find a current attributable value. Occupation
 statistics describe the mapped occupation—not credential holders—and do not prove a credential
